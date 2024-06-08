@@ -141,7 +141,7 @@ class App extends Component<{}, AppState> {
               this._play('C');
             }}
           >
-            <Color />
+
             <p>C</p>
           </ContainerPad>
           <ContainerPad
@@ -150,7 +150,7 @@ class App extends Component<{}, AppState> {
               this._play('D');
             }}
           >
-            <Color />
+
             <p>D</p>
           </ContainerPad>
           <ContainerPad
@@ -159,7 +159,88 @@ class App extends Component<{}, AppState> {
               this._play('E');
             }}
           >
-            <Color />
+
+            <p>E</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'C' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('C');
+            }}
+          >
+
+            <p>C</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'D' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('D');
+            }}
+          >
+
+            <p>D</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'E' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('E');
+            }}
+          >
+
+            <p>E</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'C' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('C');
+            }}
+          >
+
+            <p>C</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'D' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('D');
+            }}
+          >
+
+            <p>D</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'E' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('E');
+            }}
+          >
+
+            <p>E</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'C' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('C');
+            }}
+          >
+
+            <p>C</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'D' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('D');
+            }}
+          >
+
+            <p>D</p>
+          </ContainerPad>
+          <ContainerPad
+            className={pad_playing === 'E' ? 'pad active' : 'pad'}
+            onClick={() => {
+              this._play('E');
+            }}
+          >
+
             <p>E</p>
           </ContainerPad>
         </Container>

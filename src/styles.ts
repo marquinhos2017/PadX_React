@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const Container = styled.div`
+
   margin: 0;
   padding: 0;
 
@@ -23,18 +24,21 @@ export const Container = styled.div`
   font-family: Open-Sans, Helvetica, Sans-Serif;
   padding: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
   background-color: #202535;
   height: 100vh;
+
 `
 
 export const ContainerPad = styled.div`
+align-items: center;
+justify-content: center;
   background-color: #464c67;
 
   color: white;
-  border-radius: 24px;
-  height: 86px;
+  border-radius: 12px;
+  height: 190px;
   display:flex;
 
 `
