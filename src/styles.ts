@@ -23,18 +23,18 @@ export const Container = styled.div`
   font-family: Open-Sans, Helvetica, Sans-Serif;
   padding: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
-  background-color: black;
+  background-color: #202535;
   height: 100vh;
 `
 
 export const ContainerPad = styled.div`
-  background-color: green;
-  border: 1px groove white;
+  background-color: #464c67;
+
   color: white;
   border-radius: 24px;
-  height: 124px;
+  height: 86px;
 `
 
 export default GlobalStyle
