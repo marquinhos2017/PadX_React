@@ -35,6 +35,13 @@ export const ContainerPad = styled.div`
   color: white;
   border-radius: 24px;
   height: 86px;
+  display:flex;
+
+`
+
+export const Color = styled.div`
+  background-color:orange;
+  width:56px;
 `
 
 export default GlobalStyle

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'; // Você precisará criar um arquivo App.css para estilos
-import { Container, ContainerPad } from './styles';
+import { Color, Container, ContainerPad } from './styles';
 
 interface AppState {
   msg: string;
@@ -109,7 +109,6 @@ class App extends Component<{}, AppState> {
     }, interval);
   }
 
-  // Manipulador de eventos para o controle deslizante de volume mestre
   _handleMasterVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const masterVolume = parseFloat(event.target.value);
     this.setState({ masterVolume }, () => {
@@ -118,16 +117,6 @@ class App extends Component<{}, AppState> {
       this.player_pad_d.volume = masterVolume;
       this.player_pad_e.volume = masterVolume;
     });
-  }
-
-  // Manipulador de eventos para o controle deslizante de volume do pad
-  _handlePadVolumeChange = (pad: 'C' | 'D' | 'E', volume: number) => {
-    this.setState(prevState => ({
-      padVolumes: {
-        ...prevState.padVolumes,
-        [pad]: volume,
-      },
-    }));
   }
 
   render() {
@@ -141,7 +130,8 @@ class App extends Component<{}, AppState> {
               this._play('C');
             }}
           >
-            <img src="assets/play.png" alt="Play" />
+            <Color />
+
             <p>Paradise C</p>
           </ContainerPad>
           <ContainerPad
@@ -150,7 +140,7 @@ class App extends Component<{}, AppState> {
               this._play('D');
             }}
           >
-            <img src="assets/play.png" alt="Play" />
+            <Color />
             <p>Paradise D</p>
           </ContainerPad>
           <ContainerPad
@@ -159,7 +149,7 @@ class App extends Component<{}, AppState> {
               this._play('E');
             }}
           >
-            <img src="assets/play.png" alt="Play" />
+            <Color />
             <p>Paradise E</p>
           </ContainerPad>
         </Container>
@@ -178,30 +168,18 @@ class App extends Component<{}, AppState> {
             value={masterVolume}
             onChange={this._handleMasterVolumeChange}
           />
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.05"
-            value={padVolumes['C']}
-            onChange={(event) => this._handlePadVolumeChange('C', parseFloat(event.target.value))}
-          />
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.05"
-            value={padVolumes['D']}
-            onChange={(event) => this._handlePadVolumeChange('D', parseFloat(event.target.value))}
-          />
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.05"
-            value={padVolumes['E']}
-            onChange={(event) => this._handlePadVolumeChange('E', parseFloat(event.target.value))}
-          />
+
+
+          <div className="control-panel">
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.05"
+              value={masterVolume}
+              onChange={this._handleMasterVolumeChange}
+            />
+          </div>
         </div>
       </div>
     );
