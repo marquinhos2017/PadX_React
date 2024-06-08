@@ -31,7 +31,7 @@ export const Container = styled.div`
 
 export const ContainerPad = styled.div`
   background-color: green;
-  border: 2px groove blue;
+  border: 1px groove white;
   color: white;
   border-radius: 24px;
   height: 124px;
